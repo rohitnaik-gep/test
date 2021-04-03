@@ -19,7 +19,14 @@
 						"referenceName": "rohitdatalake",
 						"type": "DatasetReference"
 					},
-					"enableLogging": false,
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "linkedService1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "rohitstoragecontainer/Files"
+					},
+					"enableLogging": true,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"recursive": true,
