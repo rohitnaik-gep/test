@@ -13,16 +13,19 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "rohitdatalake",
 						"type": "DatasetReference"
 					},
-					"enableLogging": true,
+					"enableLogging": false,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
-						"fileListPath": "rohitstoragecontainer/Files",
+						"recursive": true,
+						"modifiedDatetimeEnd": {
+							"value": "@addminutes(utcnow(), -5)",
+							"type": "Expression"
+						},
 						"enablePartitionDiscovery": false
 					}
 				}
